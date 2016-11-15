@@ -9,7 +9,7 @@ int noX = 425;
 int backY = 575;
 PFont e, s;
 int level = 0;
-PImage symptom, one, two, three, four, qualiaG, qualiaR, cursor;
+PImage symptom, one, two, three, four, qualiaG, qualiaR;
 
 import processing.video.*;
 
@@ -43,7 +43,7 @@ void setup() {
   four = loadImage("four.jpg");
   qualiaG = loadImage("qualiaG.png");
   qualiaR = loadImage("qualiaR.png");
-  cursor = loadImage("cursor.png");
+ 
 }
 
 void draw() {  
@@ -84,7 +84,6 @@ void draw() {
           (mouseX > 280) && (mouseX < 320) &&
           (mouseY > 280) && (mouseY < 320) ) {
             level++; }
-    image(cursor,mouseX+10,mouseY+10);
 
     }
 }
@@ -125,8 +124,6 @@ void levelOne() {
             (mouseY > backY-15) && (mouseY < backY+15) ){
       level--;
     }
-    image(cursor,mouseX+10,mouseY+10);
-  
 }
 
 void levelTwo() {
@@ -175,10 +172,7 @@ void levelTwo() {
             (mouseX > backX-30) && (mouseX < backX+30) &&
             (mouseY > backY-15) && (mouseY < backY+15) ) {
       level--;
-    }
-            
-     image(cursor,mouseX+10,mouseY+10);
-           
+    }           
 }
 
 void levelThree() {
@@ -231,7 +225,6 @@ void levelThree() {
     else if ( (mousePressed) && 
             (mouseX > backX-30) && (mouseX < backX+30) &&
             (mouseY > 25-15) && (mouseY < 25+15) ) { level--; }
-                image(cursor,mouseX+10,mouseY+10);
 
 }
 
@@ -280,7 +273,6 @@ void levelFour() {
             (mouseX > backX-30) && (mouseX < backX+30) &&
             (mouseY > backY-15) && (mouseY < backY+15) )
           { level--; }
-              image(cursor,mouseX+10,mouseY+10);
 
 }
 
@@ -342,7 +334,6 @@ void levelFive() {
             (mouseX > backX-30) && (mouseX < backX+30) &&
             (mouseY > 25-15) && (mouseY < 25+15) )
           { level--; }
-              image(cursor,mouseX+10,mouseY+10);
 
 }
 
@@ -431,8 +422,6 @@ if ( (symptomX > oneX) && (symptomX < oneX+100) &&
             (mouseX > backX-30) && (mouseX < backX+30) &&
             (mouseY > backY-15) && (mouseY < backY+15) )
           { level--; }
-              image(cursor,mouseX+10,mouseY+10);
-
   }
 
 void levelSeven() {
@@ -474,8 +463,6 @@ void levelSeven() {
             (mouseX > backX-30) && (mouseX < backX+30) &&
             (mouseY > backY-15) && (mouseY < backY+15) )
           { level--; }
-              image(cursor,mouseX+10,mouseY+10);
-
   }
   
 
@@ -504,10 +491,7 @@ void levelEight() {
             (mouseY > backY-15) && (mouseY < backY+15) ) {
       level--;
     }
-        image(cursor,mouseX+10,mouseY+10);
 
-  
-  
 }
 void levelNine() {
   background(255);
@@ -539,7 +523,6 @@ if ( (mousePressed) &&
         { level++; }
    
     else if (keyPressed) { level--; }
-        image(cursor,mouseX+10,mouseY+10);
 
 }
 
@@ -558,6 +541,5 @@ if ( (mousePressed) &&
         (mouseX > 50) && (mouseX < 550) &&
         (mouseY > 250) && (mouseY < 350)  || (keyPressed) )
         { level = 0;} 
-            image(cursor,mouseX+10,mouseY+10);
 
 }
